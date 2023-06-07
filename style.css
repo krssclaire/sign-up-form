@@ -48,7 +48,7 @@ section {
 }
 
 h3 {
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .form {
@@ -123,7 +123,7 @@ button {
     border-radius: 15px;
     height: 50px;
     width: 75vw;
-    box-shadow: 0px 3px 2px rgb(206, 204, 204);
+    box-shadow: 0px 3.5px 2px rgb(189, 189, 189);
 }
 
 button:hover {
@@ -148,6 +148,41 @@ a:hover {
     font-size: 1.15em;
 }
 
+/* Tablet size */
+@media screen and (min-width: 600px) {
+    #logo {
+        margin: 10px 20px;
+        transform: scale(1, 1);
+    }
+    h3 {
+        font-size: 3em;
+    }
+    label {
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+    input[type="text"], 
+    input[type="email"],
+    input[type="number"],
+    input[type="password"] {
+        background-color: white;
+        font-size: 1.3em;
+        height: 45px;
+        width: 50vw;
+        max-width: 50vw;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    button {
+        font-size: 1.5rem;
+        margin: 60px auto 20px auto;
+        height: 70px;
+        width: 50vw;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+}
 
 /* Rocket SVG animation (Credits to Freepik Storyset) */
 svg#freepik_stories-to-the-stars:not(.animated) .animable {
