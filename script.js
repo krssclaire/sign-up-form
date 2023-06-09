@@ -2,22 +2,18 @@ const pwdInput = document.querySelector('#password');
 const confirmPwdInput = document.querySelector('#confirm-password');
 const inputs = document.querySelectorAll('input[type="password"]');
 
-confirmPwdInput.addEventListener('input', checkPassword);
-
-confirmPwdInput.addEventListener('blur', () => {
-    if (confirmPwdInput.value === pwdInput.value) {
-        confirmPwdInput.style.borderColor = 'rgb(206, 204, 204)';
-    } else {
-        confirmPwdInput.style.borderColor = 'rgb(195, 20, 20)';
+confirmPwdInput.addEventListener('input', () => {
+    if (confirmPwdInput == document.activeElement) {
+        if (confirmPwdInput.value === pwdInput.value) green();
+        else red();
     }
 });
 
-function checkPassword() {
-    if (confirmPwdInput == document.activeElement) {
-        if (confirmPwdInput.value === pwdInput.value) {
-            confirmPwdInput.style.borderColor = 'rgb(19, 161, 6)';
-        } else {
-            confirmPwdInput.style.borderColor = 'rgb(195, 20, 20)';
-        }
-    }
-}
+confirmPwdInput.addEventListener('blur', () => {
+    if (confirmPwdInput.value === pwdInput.value) grey();
+    else red();
+});
+
+const green = () => confirmPwdInput.style.borderColor = 'rgb(19, 161, 6)';
+const red = () => confirmPwdInput.style.borderColor = 'rgb(195, 20, 20)';
+const grey = () => confirmPwdInput.style.borderColor = 'rgb(206, 204, 204)';
