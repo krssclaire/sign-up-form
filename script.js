@@ -3,10 +3,8 @@ const confirmPwdInput = document.querySelector('#confirm-password');
 const inputs = document.querySelectorAll('input[type="password"]');
 
 confirmPwdInput.addEventListener('input', () => {
-    if (confirmPwdInput == document.activeElement) {
-        if (confirmPwdInput.value === pwdInput.value) green();
-        else red();
-    }
+    if (confirmPwdInput.value === pwdInput.value) green();
+    else red();
 });
 
 confirmPwdInput.addEventListener('blur', () => {
